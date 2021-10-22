@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.15)
-project(tapbox LANGUAGES CXX)
+project(tapboxa LANGUAGES CXX)
 
-set(BINARY_NAME "tapbox")
+set(BINARY_NAME "tapboxa")
 
 cmake_policy(SET CMP0063 NEW)
 
