@@ -33,11 +33,13 @@ Route _createRoute() {
     transitionsBuilder: (context, animation, secondaryAnimation, child) {
       const begin = Offset(0.0, 1.0);
       const end = Offset.zero;
-      final tween = Tween(begin: begin, end: end);
+      var curve = Curves.ease;
+      final tween =
+          Tween(begin: begin, end: end).chain(CurveTween(curve: curve));
       final offsetAnimation = animation.drive(tween);
 
       return SlideTransition(
-        position: offsetAnimation,
+        position: animation.drive(tween),
         child: child,
       );
     },
